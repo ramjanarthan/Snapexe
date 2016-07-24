@@ -1,1 +1,3 @@
-# snapexe
+Snapexe
+
+Our Android application, Snapexe, is aimed at providing people an easy way to manage their daily expenses. It will allow users to enter details about their purchases, and maintain them in an easy to view manner.The app will also provide users with the ability to update the expenditure record by simply snapping a picture of their bill or reciept on their smartphone. It will show users their monthly expenditure levels, expenses under each user-specified categories, and also allow search and deletion of old records. Our app aims to differentaite itself from others in the same market, by having simple and easy to work with controls,as well as Optical Character Recognition (OCR) capabilties.We hope this app will encourage users to manage their spending wisely, and help them efficently keep an eye on how and where they spend as well. 
