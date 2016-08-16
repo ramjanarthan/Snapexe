@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="TesseractDemo.Pages.EntryPage">
+
+  <ScrollView>
+  <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#FFDE00" Spacing="20" Padding="20">
+
+    <Label Text="Make an entry" TextColor="#F50057" FontSize="Large" VerticalOptions="Start" HorizontalOptions="Center" />
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Spacing="1" >
+      <Label Text="Category" FontSize="Small"  TextColor="#F50057" HorizontalOptions="Start" VerticalOptions="Center"/>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Start" >
+      <Entry x:Name="Category" TextColor="#FFFFFF" HorizontalOptions="FillAndExpand" FontSize="Large" VerticalOptions="End" />
+      <Picker x:Name="CategPicker" HorizontalOptions="End"/>
+    </StackLayout>
+  </StackLayout>
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Spacing="5" >
+      <Label Text="Name of Shop/Expense" FontSize="Small" TextColor="#F50057" VerticalOptions="Center" />   
+      <Entry x:Name="Name" TextColor="#FFFFFF" HorizontalOptions="FillAndExpand" FontSize="Large" VerticalOptions="End" />
+    </StackLayout>
+
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Spacing="3" >
+      <Label Text="Amount" TextColor="#F50057" VerticalOptions="Center" FontSize="Small" />
+      <Entry x:Name="Amount" TextColor="#FFFFFF" HorizontalOptions="FillAndExpand" FontSize="Large" VerticalOptions="End" />
+    </StackLayout>
+
+      <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Spacing="2" >
+       <Label Text="Date" TextColor="#F50057"  VerticalOptions="Center" FontSize="Small" />
+       <DatePicker x:Name="Dates" Date="{x:Static sys:DateTime.Now}"  HorizontalOptions="Start"  Format="dd-MM-yy"/>
+      </StackLayout>
+
+
+    <Button  x:Name="button" Text="SUBMIT" TextColor="#FFFFFF" BackgroundColor="#0cdaa1" HorizontalOptions="Center" VerticalOptions="Center" />
+
+    <Button x:Name="button2" Text="CLEAR" TextColor="#FFFFFF" BackgroundColor="#0cdaa1" HorizontalOptions="Center" />
+  </StackLayout>
+  </ScrollView>
+
+</ContentPage>

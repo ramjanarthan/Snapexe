@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="TesseractDemo.Pages.Search">
+  <ScrollView>
+  <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="#FFDE00" Spacing="20" Padding="20">
+
+    <StackLayout VerticalOptions="Start">
+     
+      <Label Text="Search by Date" TextColor="#F50057" FontSize="Large" VerticalOptions="Start" HorizontalOptions="Center"/>
+     
+      <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Label Text="Select Date" TextColor="#F50057"  VerticalOptions="Center" FontSize="Small"/>
+        <DatePicker x:Name="Dates" HorizontalOptions="Start" Date="{x:Static sys:DateTime.Now}" Format="dd-MM-yy" VerticalOptions="End"/>
+      </StackLayout>
+ 
+      <Button x:Name="button1"   TextColor="#FFFFFF"  BackgroundColor="#0cdaa1" Text="Submit" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
+
+    <StackLayout x:Name="stack" VerticalOptions="End" >
+      <Label Text="Search by Name" TextColor="#F50057" FontSize="Large" VerticalOptions="End" HorizontalOptions="Center"/>
+     
+      <StackLayout VerticalOptions="End" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Label Text="Enter Name" TextColor="#F50057"  VerticalOptions="Center" FontSize="Small"/>
+        <Entry x:Name="Name" TextColor="#FFFFFF" HorizontalOptions="FillAndExpand"  FontSize="Large" VerticalOptions="End" />
+      </StackLayout>
+
+      <Button x:Name="button2" TextColor="#FFFFFF"  BackgroundColor="#0cdaa1" Text="Submit" HorizontalOptions="CenterAndExpand" />
+    </StackLayout>
+    
+   
+    
+    <Label x:Name="fail" TextColor="#0cdaa1" Text="No Records for this Name" HorizontalOptions="Center" FontSize="Large" IsVisible="False" />
+
+  </StackLayout>
+
+    </ScrollView>
+</ContentPage>
+

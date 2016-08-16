@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesseractDemo.Pages.CameraPage">
+
+  <ScrollView>
+    
+  
+  <StackLayout VerticalOptions="FillAndExpand" Spacing="30" Padding="20" BackgroundColor="#FFDE00">
+
+    <Label Text="Welcome to Snapexe, your handy expense tracking app!" TextColor="#F50057" HorizontalTextAlignment="Center" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+
+    <Label Text="Tip: Align the name at the top of the photo and the amount at the bottom in horizontal orientation, for best results" TextColor="#F50057" HorizontalTextAlignment="Start" FontSize="Small" />
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+      <Button x:Name="button1" Text="Take a Picture of a Reciept" BackgroundColor="#0cdaa1" VerticalOptions="Center" HorizontalOptions="Center" />
+    </StackLayout>
+ 
+    <ActivityIndicator x:Name="active" Color="#0cdaa1" />
+    
+    <Label x:Name="_recognizedTextLabel" /> 
+
+    <Image x:Name="tick" IsVisible="False" VerticalOptions="End" HorizontalOptions="Center"/>
+    
+  </StackLayout>
+  </ScrollView>
+     
+
+</ContentPage>

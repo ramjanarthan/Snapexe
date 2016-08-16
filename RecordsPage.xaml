@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesseractDemo.Pages.RecordsPage">
+  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#FFDE00">
+    
+    <StackLayout x:Name="stack" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#ffff00">
+      <Label Text="Total" TextColor="#F50057" FontSize="Large" HorizontalOptions="Center" VerticalTextAlignment="Center" />
+      <Label x:Name ="Sum" TextColor="#0cdaa1" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center" FontSize="Large"/>
+    </StackLayout>
+
+    <StackLayout x:Name="liststack"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="FillAndExpand">
+                
+    <ListView x:Name="listview">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell x:Name="viewCell">
+            <ViewCell.ContextActions>
+              <MenuItem Clicked="OnDelete" 
+                        CommandParameter="{Binding .}"
+                        Text="Delete"
+                        />
+            </ViewCell.ContextActions>
+            <ViewCell.View>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="{Binding Name}"
+                       TextColor="#F50057"
+                       FontSize="Small"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"/>
+
+                <Label Text="{Binding Amount}"
+                       TextColor="#0cdaa1"
+                       FontSize="Small"
+                       VerticalOptions="Center"
+                       HorizontalOptions="FillAndExpand"/>
+
+
+                <Label Text="{Binding  Date}"
+                       TextColor="#F50057"
+                       FontSize="Small"
+                       VerticalOptions="Center"
+                       HorizontalOptions="EndAndExpand"/>
+
+              </StackLayout>
+            </ViewCell.View>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+
+
+    </ListView>
+    </StackLayout>
+
+
+
+
+  </StackLayout>
+</ContentPage>

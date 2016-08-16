@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TesseractDemo.Pages.MonthPage">
+
+  <StackLayout BackgroundColor="#FFDE00" VerticalOptions="FillAndExpand" Padding="20">
+
+  <Label Text="Records sorted by Month" TextColor="#F50057" FontSize="Large" VerticalOptions="Start" HorizontalTextAlignment="Center" />
+  <Label x:Name="noRecords" Text="No Records" FontSize="Large" TextColor="#0cdaa1" IsVisible="True" HorizontalOptions="Center"/>
+    
+  <ListView x:Name="listview">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand"
+                         >
+              <Label Text="{Binding}" 
+                     TextColor="#F50057"
+                     FontSize="Large"
+                     VerticalOptions="Center"
+                     HorizontalTextAlignment="Center"/>
+            </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+
+
+  </ListView>
+    
+    </StackLayout>
+</ContentPage>
